@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
-![](https://github.com/web102_prework/WebsiteDemo.gif)
+![](https://github.com/JamesSo1/web102_prework/WebsiteDemo.gif)
 
 
 <!-- Replace this with whatever GIF tool you used! -->
