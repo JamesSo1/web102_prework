@@ -36,7 +36,15 @@ function addGamesToPage(games) {
     gameCard.classList.add("game-card");
     // set the inner HTML using a template literal to display some info
     // about each game
-    gameCard.innerHTML = `<img class = "game-img" src = ${games[i].img} > <br><b>${games[i].name}</b><br><p>${games[i].description}</p><p>Backers: ${games[i].backers}</p>`;
+    gameCard.innerHTML = `<img class = "game-img" src = ${
+      games[i].img
+    } > <br><b>${games[i].name}</b><br><p>${
+      games[i].description
+    }</p><p>Backers: ${games[i].backers}</p><p>Amount Pledged: $${games[
+      i
+    ].pledged.toLocaleString("en-US")} / $${games[i].goal.toLocaleString(
+      "en-US"
+    )}</p>`;
     // TIP: if your images are not displaying, make sure there is space
     // between the end of the src attribute and the end of the tag ("/>")
 
@@ -114,6 +122,45 @@ function filterFundedOnly() {
   addGamesToPage(listOfFundedGames);
 }
 
+//filter in ascending order of highest pledged to lowest
+function filterByPledged() {
+  deleteChildElements(gamesContainer);
+
+  //get an array of games sorted by pledged amounts(highest to lowest)
+  const sortedGames = GAMES_JSON.sort((item1, item2) => {
+    return item2.pledged - item1.pledged;
+  });
+
+  // use the function we previously created to add sorted games to the DOM
+  addGamesToPage(sortedGames);
+}
+
+//filter in ascending order of highest goal amounts to lowest
+function filterByGoal() {
+  deleteChildElements(gamesContainer);
+
+  //get an array of games sorted by goal amounts(highest to lowest)
+  const sortedGames = GAMES_JSON.sort((item1, item2) => {
+    return item2.goal - item1.goal;
+  });
+
+  // use the function we previously created to add sorted games to the DOM
+  addGamesToPage(sortedGames);
+}
+
+//filter in ascending order of highest backeer amounts to lowest
+function filterByBackers() {
+  deleteChildElements(gamesContainer);
+
+  //get an array of games sorted by backer amounts(highest to lowest)
+  const sortedGames = GAMES_JSON.sort((item1, item2) => {
+    return item2.backers - item1.backers;
+  });
+
+  // use the function we previously created to add sorted games to the DOM
+  addGamesToPage(sortedGames);
+}
+
 // show all games
 function showAllGames() {
   deleteChildElements(gamesContainer);
@@ -125,11 +172,17 @@ function showAllGames() {
 // select each button in the "Our Games" section
 const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
+const pledgedBtn = document.getElementById("pledged-btn");
+const goalBtn = document.getElementById("goal-btn");
+const backersBtn = document.getElementById("backers-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
 unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
+pledgedBtn.addEventListener("click", filterByPledged);
+goalBtn.addEventListener("click", filterByGoal);
+backersBtn.addEventListener("click", filterByBackers);
 allBtn.addEventListener("click", showAllGames);
 /*************************************************************************************
  * Challenge 6: Add more information at the top of the page about the company.
