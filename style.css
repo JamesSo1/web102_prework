@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
 
+.header-text {
+  font-family: "Original Surfer", sans-serif;
+}
 body {
   font-family: "Cabin";
   background-color: #758190;
@@ -54,6 +57,10 @@ body {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 0 10px #ffffff;
+}
+
+.expanded {
+  width: 100%;
 }
 
 .game-card {
