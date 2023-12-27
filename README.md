@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
-<img src="https://github.com/JamesSo1/web102_prework/blob/main/WebsiteDemo.gif" width="300">
+<img src="https://github.com/JamesSo1/web102_prework/blob/main/WebsiteDemo.gif" width="200">
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LiceCap 
@@ -35,11 +35,11 @@ GIF created with LiceCap
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The primary challenge with this project was getting accustomed to the code that was already written for the website as well as getting comfortable with the new concepts and methods used to complete this website. I learned a good amount of new things from this project which was fun since some methods such as "filter" are ones that I hadn't used before but will certainly use in the future.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2023 [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
