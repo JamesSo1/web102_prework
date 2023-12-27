@@ -24,7 +24,8 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
-<img src="https://github.com/JamesSo1/web102_prework/blob/main/WebsiteDemo.gif" width="270">
+
+<img src="https://github.com/JamesSo1/web102_prework/blob/main/WebsiteDemo.gif" width="275">
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LiceCap 
